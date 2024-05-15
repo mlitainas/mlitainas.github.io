@@ -14,7 +14,7 @@ body {
   -height: 1000vh;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: rgb(37, 57, 91);
+  background-color: #3d5071;
   font-size: 16pt;
 }
 
@@ -24,6 +24,13 @@ img{
     border: 12px ;
     float: left;
     margin-right: 20px;
+}
+
+.mydiv{
+    height: 300px;
+    border: 12px ;
+    float: left;
+    color: white;
 }
 /* Style the header */
 header {
@@ -35,8 +42,8 @@ header {
 }
 /* Style for the navigation pane */
 .topnav {
-            background-color: white; /* Background color */
-            overflow: hidden; /* Ensure overflow is hidden */
+          background-color: white; /* Background color */
+          overflow: hidden; /* Ensure overflow is hidden */
         }
 
         /* Style for navigation links */
@@ -45,7 +52,7 @@ header {
             display: block; /* Display links as block elements */
             color: black; /* Link text color */
             text-align: right; /* Center-align text */
-            padding: 30px 50px; /* Padding around the text */
+            padding: 20px 30px; /* Padding around the text */
             text-decoration: none; /* Remove underline */
             font-family: Verdana, Geneva, Tahoma, sans-serif;  
             font-size: 30px;
@@ -53,7 +60,7 @@ header {
 
         /* Change color of links on hover */
         .topnav a:hover {
-            background-color: cyan; /* Background color on hover */
+            background-color: rgb(174, 176, 176); /* Background color on hover */
             color: #333; /* Text color on hover */
         }
         .topnav a.split {
@@ -76,13 +83,27 @@ nav ul {
   padding: 0;
 }
 
-article {
+.shortbio {
   float: right;
   padding: 20px;
   width: 70%;
-  background-color: #f1f1f1;
-  height: 300px; /* only for demonstration, should be removed */
+  background-color: #ffffff;
+  height: 500px; /* only for demonstration, should be removed */
 }
+
+.workexp {
+  float: right;
+  padding: 20px;
+  width: 70%;
+  background-color: #ffffff;
+  height: 400px; /* only for demonstration, should be removed */
+}
+.column {
+  float: left;
+  width: 50%;
+}
+
+
 
 /* Clear floats after the columns */
 section::after {
@@ -112,35 +133,94 @@ footer {
 
 
 <div class="topnav">
-    <a href="#home">Home</a>
-    <a href="#news">News</a>
-    <a href="#about" class="split">Michael Litainas</a>
+  <a href="#news">Code</a>
+  <a href="#research">Research</a>
+  <a href="#home">Home</a>
+  <a href="#about" class="split">Michael Litainas</a>
 </div>  
-
+<hr>
 <section>
     <img src="avatar.jpg" width="300" alt="Personal image">
   
-  <article>
+  <article class="shortbio">
     <h1>Welcome to my website!</h1> 
         <p>I am Michael, a PhD srtudent in the University of Sheffield. 
            I'm a PhD student in the Department of Economics at the University of Sheffield.
            My main research interests are in the are of Empirical Macroeconomics and time-series econometrics. 
            I enjoy programming in R.</p> 
-  </article>
-</section>
 
-
-<section>
-  <article>
-       
+           <div class="container">
+            <div class="column">
+              <p><b>Research Interests.</b> </p>
+              <ul>
+               <li> Applied Macroeconomics</li>
+               <li> Time-series econometrics </li>
+               <li> Fiscal policy</li>
+               <li> Monetary policy</li>
+               <li> Production networks</li>
+              </ul>
+            </div>
+            <div class="column">
+              <p><b>Education</b> </p>
+            <ul class="fa-ul"> 
+             <li> PhD in Economics </li>
+             <dt> <small>University of Sheffield </small></dt>
+             <dt> <hr color="white"> </dt>
+             <li> MSc in Economics </li>
+             <dt> <small>University of Macedonia, Greece </small></dt>
+             <dt> <hr color="white"> </dt>
+             <li> BSc in Economics</li>
+             <dt> <small>University of Macedonia, Greece </small></dt>      
+            </ul>
+            </div>
+        </div>
+          
   </article>
   
-  <article>
-    <h1>London</h1>
-    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-    <p>Standing on the River Thames, London has been a major settlement for two .</p>
-  </article>
 </section>
+
+<hr color= "#3d5071" class="block"> 
+
+<!---->
+<section>
+
+  <div class="mydiv"><h2> Research</h2></div>
+ 
+ 
+<article class="shortbio">
+      <p> "Sectoral Government spending  multipliers in a production network: an empirical investigation for the UK”</p> 
+      <br>
+      <p> "Sectoral Government spending  multipliers in a production network: an empirical investigation for the UK”</p> 
+      <br>
+      <p> "Sectoral Government spending  multipliers in a production network: an empirical investigation for the UK”</p> 
+
+         
+        
+</article>
+
+</section>
+
+<hr color= "#3d5071" class="block"> 
+<!---->
+<section>
+
+  <div class="mydiv"><h3> Working Experience </h3></div>
+ 
+ 
+<article class="workexp">
+      <p>I am Michael, a PhD srtudent in the University of Sheffield. 
+         I'm a PhD student in the Department of Economics at the University of Sheffield.
+         My main research interests are in the are of Empirical Macroeconomics and time-series econometrics. 
+         I enjoy programming in R.</p> 
+
+         
+        
+</article>
+
+</section>
+
+
+
 
 
 
