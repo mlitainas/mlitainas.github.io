@@ -14,16 +14,18 @@ body {
   -height: 1000vh;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #3d5071;
+  background-color: #434e5f;
   font-size: 16pt;
 }
 
+
 img{
-    height: 300px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     border: 12px ;
     float: left;
-    margin-right: 20px;
+    margin-left: 50px;
 }
 
 .mydiv{
@@ -91,6 +93,16 @@ nav ul {
   height: 500px; /* only for demonstration, should be removed */
 }
 
+.research {
+  float: right;
+  padding: 10px;
+  padding-top: 0px;
+  width: 70%;
+  background-color: #ffffff;
+  height: 350px; /* only for demonstration, should be removed */
+}
+
+
 .workexp {
   float: right;
   padding: 20px;
@@ -98,10 +110,20 @@ nav ul {
   background-color: #ffffff;
   height: 400px; /* only for demonstration, should be removed */
 }
+
+.code {
+  float: right;
+  padding: 20px;
+  width: 70%;
+  background-color: #ffffff;
+  height: 250px; /* only for demonstration, should be removed */
+}
+
 .column {
   float: left;
   width: 50%;
 }
+
 
 
 
@@ -150,35 +172,41 @@ footer {
 
 
 <div class="topnav">
-  <a href="#news">Code</a>
-  <a href="#research">Research</a>
+  <a href="#news"></a>
+  <a href="#research"></a>
   <a href="#home">Home</a>
   <a href="#about" class="split">Michael Litainas</a>
 </div>  
 <hr>
-<section>
-    <img src="avatar.jpg" width="300" alt="Personal image">
-  
-  <article class="shortbio">
-    <h1>Welcome to my website!</h1> 
-        <p>I am Michael, a PhD srtudent in the University of Sheffield. 
-           I'm a PhD student in the Department of Economics at the University of Sheffield.
-           My main research interests are in the are of Empirical Macroeconomics and time-series econometrics. 
-           I enjoy programming in R.</p> 
 
-           <div class="container">
-            <div class="column">
-              <p><b>Research Interests.</b> </p>
-              <ul>
-               <li> Applied Macroeconomics</li>
-               <li> Time-series econometrics </li>
-               <li> Fiscal policy</li>
-               <li> Monetary policy</li>
-               <li> Production networks</li>
-              </ul>
-            </div>
-            <div class="column">
-              <p><b>Education</b> </p>
+<section>
+
+  <div class = "avatar_row">
+    <img src="avatar.jpg" width="300" alt="Personal image">
+  </div>   
+
+
+<div>
+  <article class="shortbio">
+    <h1>Hi!</h1> 
+     <p>I am Michael, a PhD srtudent in the University of Sheffield. 
+        I'm a PhD student in the Department of Economics at the University of Sheffield.
+        My main research interests are in the area of Applied Macroeconomics and time-series econometrics. 
+        I enjoy programming in R.</p> 
+
+     <div class="container">
+        <div class="column">
+          <p><b>Research Interests.</b> </p>
+          <ul>
+          <li> Applied Macroeconomics</li>
+          <li> Time-series econometrics </li>
+          <li> Fiscal policy</li>
+          <li> Monetary policy</li>
+          <li> Production networks</li>
+          </ul>
+         </div>
+         <div class="column">
+            <p><b>Education</b> </p>
             <ul class="fa-ul"> 
              <li> PhD in Economics </li>
              <dt> <small>University of Sheffield </small></dt>
@@ -189,27 +217,28 @@ footer {
              <li> BSc in Economics</li>
              <dt> <small>University of Macedonia, Greece </small></dt>      
             </ul>
-            </div>
-        </div>
+         </div>
+      </div>
           
   </article>
+</div>
   
 </section>
 
-<hr color= "#3d5071" class="block"> 
+<hr color= "#434e5f" class="block"> 
 
 <!---->
 <section>
 
-  <div class="mydiv"><h2> Research</h2></div>
+<div class="mydiv"><h2> Research</h2></div>
  
  
-<article class="shortbio">
-      <p> "Sectoral Government spending  multipliers in a production network: an empirical investigation for the UK”</p> 
-      <br>
-      <p> "Sectoral Government spending  multipliers in a production network: an empirical investigation for the UK”</p> 
-      <br>
-      <p> "Sectoral Government spending  multipliers in a production network: an empirical investigation for the UK”</p> 
+<article class="research">
+      <p>Work in progress. Drafts coming soon!</p>
+      <p> “The sectoral effects of oil supply shocks: evidence for the UK” (2024)</p> 
+      <p> "Sectoral Government spending  multipliers in a production network: an empirical investigation for the UK”</p>
+      <p> “The international transmission of US government spending shocks”(2021) </p>
+      <p> “The spatial dimension of the macroeconomic effects of labour reallocation. An empirical application for the U.S.” (2019) with T.Panagiotidis </p> 
 
          
         
@@ -217,33 +246,22 @@ footer {
 
 </section>
 
-<hr color= "#3d5071" class="block"> 
-<!---->
+<hr color= "#434e5f" class="block"> 
+<!--
 <section>
 
-  <div class="mydiv"><h3> Working Experience </h3></div>
- 
- 
-<article class="workexp">
-      <p>I am Michael, a PhD srtudent in the University of Sheffield. 
-         I'm a PhD student in the Department of Economics at the University of Sheffield.
-         My main research interests are in the are of Empirical Macroeconomics and time-series econometrics. 
-         I enjoy programming in R.</p> 
+  <div class="mydiv"><h3> Code </h3></div>
+   <article class="code">
+      <p></p> 
 
          
         
-</article>
+  </article>
 
 </section>
-
-
-
-
-
-
-<footer>
-    &lt;&lt;&lt; &copy; <a href="about.html"> Michael Litainas </a> &gt;&gt;&gt;
-</footer>
+-->
+  <footer>
+      &lt;&lt;&lt; &copy; <a href="about.html"> Michael Litainas </a> &gt;&gt;&gt;
+  </footer>
 </body>
 </html>
-

@@ -3,93 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Pane Example</title>
+    <title>Image with Social Media Links</title>
     <style>
-
         body {
-            min-height: 1000vh;
-            max-width: 900px;
-            margin: 0 auto;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
         }
-        img{
-            height: 300px;
-            border-radius: 50%;
-            border: 12px ;
-            float: left;
-            margin-right: 20px;
+        .image-container {
+            text-align: center;
+            margin-top: 50px;
         }
-        .header {
-            padding: 1cqb;
-            text-align: left;
-            background: #fafafa;
-            color: black;
-            font-size: 20px;
+        .image-container img {
+            max-width: 20%;
+            height: auto;
+            border-radius: 8px;
         }
         
-        /* Style for the navigation pane */
-        .topnav {
-            background-color: white; /* Background color */
-            overflow: hidden; /* Ensure overflow is hidden */
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #000;
+            font-size: 24px;
+        }
+        .social-links a:hover {
+            color: #0073e6;
         }
 
-        /* Style for navigation links */
-        .topnav a {
-            float: right; /* Float the links to the left */
-            display: block; /* Display links as block elements */
-            color: black; /* Link text color */
-            text-align: right; /* Center-align text */
-            padding: 30px 50px; /* Padding around the text */
-            text-decoration: none; /* Remove underline */
-            font-family: Verdana, Geneva, Tahoma, sans-serif;  
-            font-size: 30px;
+        .shortbio {
+            float: right;
+            padding: 20px;
+            width: 70%;
+            background-color: #ffffff;
+            height: 500px; /* only for demonstration, should be removed */
+        }
+        .column {
+           float: left;
+            width: 50%;
+        }
+        content{
+            width:1000x;/*change the value to suite ur need*/
+            margin:0 auto;/*this will center ur content*/
         }
 
-        /* Change color of links on hover */
-        .topnav a:hover {
-            background-color: cyan; /* Background color on hover */
-            color: #333; /* Text color on hover */
-        }
-        .topnav a.split {
-            float: left;
-            background-color: white;
-            color: black;
-        }
-
-        .div{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;  
-            font-size: 30px;
-            background-color: cyan; /* Background color on hover */
-        }
     </style>
 </head>
-
 <body>
 
-    <div class="topnav">
-        <a href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#about" class="split">Michael Litainas</a>
-    </div>  
+<div id = "content" >
 
-<main>
+    <div class="image-container">
+        <img src="avatar.jpg" alt="Your Image Description">
+    </div>
 
-    <section>
-        <h2>About me</h2>
-        <img src="avatar.jpg" width="300" alt="Personal image">
-        <div style="padding:20px;">
-          <p>This is just a placeholder content.</p>
-        </div>
-    </section>
+    <div class="social-links">
+        <a href="https://facebook.com/your-profile" target="_blank">Facebook</a>
+        <a href="https://twitter.com/your-profile" target="_blank">Twitter</a>
+        <a href="https://instagram.com/your-profile" target="_blank">Instagram</a>
+        <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+    </div>
 
-    <section>
-        <h2>Education</h1>
+    <article class="shortbio">
+        <h1>Welcome to my website!</h1> 
+            <p>I am Michael, a PhD srtudent in the University of Sheffield. 
+               I'm a PhD student in the Department of Economics at the University of Sheffield.
+               My main research interests are in the are of Empirical Macroeconomics and time-series econometrics. 
+               I enjoy programming in R.</p> 
+    
+               <div class="container">
+                <div class="column">
+                  <p><b>Research Interests.</b> </p>
+                  <ul>
+                   <li> Applied Macroeconomics</li>
+                   <li> Time-series econometrics </li>
+                   <li> Fiscal policy</li>
+                   <li> Monetary policy</li>
+                   <li> Production networks</li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <p><b>Education</b> </p>
+                <ul class="fa-ul"> 
+                 <li> PhD in Economics </li>
+                 <dt> <small>University of Sheffield </small></dt>
+                 <dt> <hr color="white"> </dt>
+                 <li> MSc in Economics </li>
+                 <dt> <small>University of Macedonia, Greece </small></dt>
+                 <dt> <hr color="white"> </dt>
+                 <li> BSc in Economics</li>
+                 <dt> <small>University of Macedonia, Greece </small></dt>      
+                </ul>
+                </div>
+            </div>
+              
+      </article>
 
-
-    </section>
-</main>
-<hr>
-<footer>
-    &lt;&lt;&lt; &copy; <a href="about.html"> Michael Litainas </a> &gt;&gt;&gt;
-</footer>
+</div>
 </body>
 </html>
