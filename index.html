@@ -4,6 +4,8 @@
 <title>CSS Template</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
 * {
   box-sizing: border-box;
@@ -11,29 +13,27 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  -height: 1000vh;
   max-width: 1200px;
   margin: 0 auto;
   background-color: #434e5f;
   font-size: 16pt;
 }
 
-
-img{
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    border: 12px ;
-    float: left;
-    margin-left: 50px;
+img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 12px;
+  margin: 30px;
 }
 
-.mydiv{
-    height: 300px;
-    border: 12px ;
-    float: left;
-    color: white;
+.mydiv {
+  height: 300px;
+  color: white;
+  margin: 10px 0;
+  clear: both;
 }
+
 /* Style the header */
 header {
   background-color: #666;
@@ -42,96 +42,80 @@ header {
   font-size: 35px;
   color: white;
 }
+
 /* Style for the navigation pane */
 .topnav {
-          background-color: white; /* Background color */
-          overflow: hidden; /* Ensure overflow is hidden */
-        }
+  background-color: white;
+  overflow: hidden;
+}
 
-        /* Style for navigation links */
-        .topnav a {
-            float: right; /* Float the links to the left */
-            display: block; /* Display links as block elements */
-            color: black; /* Link text color */
-            text-align: right; /* Center-align text */
-            padding: 20px 30px; /* Padding around the text */
-            text-decoration: none; /* Remove underline */
-            font-family: Verdana, Geneva, Tahoma, sans-serif;  
-            font-size: 30px;
-        }
+/* Style for navigation links */
+.topnav a {
+  float: right;
+  display: block;
+  color: black;
+  text-align: right;
+  padding: 20px 30px;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+}
 
-        /* Change color of links on hover */
-        .topnav a:hover {
-            background-color: rgb(174, 176, 176); /* Background color on hover */
-            color: #333; /* Text color on hover */
-        }
-        .topnav a.split {
-            float: left;
-            background-color: white;
-            color: black;
-        }
-/* Create two columns/boxes that floats next to each other */
-nav {
+/* Change color of links on hover */
+.topnav a:hover {
+  background-color: rgb(174, 176, 176);
+  color: #333;
+}
+
+.topnav a.split {
   float: left;
-  width: 30%;
-  height: 300px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
+  background-color: white;
+  color: black;
 }
 
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.shortbio {
-  float: right;
-  padding: 20px;
-  width: 70%;
-  background-color: #ffffff;
-  height: 500px; /* only for demonstration, should be removed */
-}
-
-.research {
-  float: right;
-  padding: 10px;
-  padding-top: 0px;
-  width: 70%;
-  background-color: #ffffff;
-  height: 350px; /* only for demonstration, should be removed */
-}
-
-
-.workexp {
-  float: right;
-  padding: 20px;
-  width: 70%;
-  background-color: #ffffff;
-  height: 400px; /* only for demonstration, should be removed */
-}
-
-.code {
-  float: right;
-  padding: 20px;
-  width: 70%;
-  background-color: #ffffff;
-  height: 250px; /* only for demonstration, should be removed */
-}
-
-.column {
-  float: left;
-  width: 50%;
-}
-
-
-
-
-/* Clear floats after the columns */
-section::after {
+/* Clear floats */
+.clearfix::after {
   content: "";
   display: table;
   clear: both;
+}
+
+.shortbio,
+.research,
+.workexp,
+.code {
+  padding: 20px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Columns for content */
+.column {
+  float: left;
+  width: 100%;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .column {
+    width: 50%;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .column {
+  flex: 1;
+  min-width: 50%;
+}
+
+@media (max-width: 767px) {
+  .container .column {
+    min-width: 100%;
+  }
 }
 
 /* Style the footer */
@@ -142,125 +126,128 @@ footer {
   color: white;
 }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+/* Responsive layout for navigation */
 @media (max-width: 600px) {
-  nav, article {
+  .topnav a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+  img {
+    display: block;
+    margin: 20px auto;
+    float: none;
+  }
+  .shortbio,
+  .research,
+  .workexp,
+  .code {
     width: 100%;
-    height: auto;
+    float: none;
   }
 }
 
- /* Media query for smartphones (up to 767px) */
- @media (max-width: 767px) {
-        /* Define styles specific to smartphones */
-        /* For example: */
-        /* Adjust font sizes, margins, paddings, etc. */
-    }
+.section_title{
+  height: 30px;
+  color: white;
+  margin: 10px 0;
+  clear: both;
+}
 
-    /* Media query for tablets (768px - 1023px) */
-    @media (min-width: 768px) and (max-width: 1023px) {
-        /* Define styles specific to tablets */
-    }
 
-    /* Media query for desktops and larger screens (min-width: 1024px) */
-    @media (min-width: 1024px) {
-        /* Define styles specific to desktops and larger screens */
-    }
+.avatar_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-icons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 50px;
+}
+
+.social-icons a:hover {
+  color: #ccc;
+}
 </style>
 </head>
 <body>
 
-
 <div class="topnav">
-  <a href="#news"></a>
-  <a href="#research"></a>
   <a href="#home">Home</a>
+  <a href="#research">Research</a>
+  <a href="#news"></a>
   <a href="#about" class="split">Michael Litainas</a>
-</div>  
+</div>
 <hr>
 
-<section>
+<section class="clearfix">
+    <img src="avatar.jpg" alt="Personal image" class="avatar_img">
+</section>
 
-  <div class = "avatar_row">
-    <img src="avatar.jpg" width="300" alt="Personal image">
-  </div>   
+<section class="clearfix">
+  <div class="social-icons">
+  <a href="https://github.com/mlitainas" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="https://www.linkedin.com/in/michael-litainas/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <a href="https://www.linkedin.com/in/michael-litainas/" target="_blank"><i class="fab fa-twitter"></i></a>
+  </div>
+</section>
 
 
-<div>
-  <article class="shortbio">
-    <h1>Hi!</h1> 
-     <p>I'm a PhD student in the Department of Economics at the University of Sheffield.
-        My main research interests are in the area of Applied Macroeconomics and time-series econometrics. 
-        I enjoy programming in R.</p> 
-
-     <div class="container">
-        <div class="column">
-          <p><b>Research Interests.</b> </p>
-          <ul>
-          <li> Applied Macroeconomics</li>
-          <li> Time-series econometrics </li>
-          <li> Fiscal policy</li>
-          <li> Monetary policy</li>
-          <li> Production networks</li>
-          </ul>
-         </div>
-         <div class="column">
-            <p><b>Education</b> </p>
-            <ul class="fa-ul"> 
-             <li> PhD in Economics </li>
-             <dt> <small>University of Sheffield </small></dt>
-             <dt> <hr color="white"> </dt>
-             <li> MSc in Economics </li>
-             <dt> <small>University of Macedonia, Greece </small></dt>
-             <dt> <hr color="white"> </dt>
-             <li> BSc in Economics</li>
-             <dt> <small>University of Macedonia, Greece </small></dt>      
-            </ul>
-         </div>
+ <article class="shortbio">
+    <h1>Hi!</h1>
+    <p>I'm a PhD student in the Department of Economics at the University of Sheffield. My main research interests are in the area of Applied Macroeconomics and time-series econometrics. I enjoy programming in R.</p>
+    <div class="container">
+      <div class="column">
+        <p><b>Research Interests.</b></p>
+        <ul>
+          <li>Applied Macroeconomics</li>
+          <li>Time-series econometrics</li>
+          <li>Fiscal policy</li>
+          <li>Monetary policy</li>
+          <li>Production networks</li>
+        </ul>
       </div>
-          
-  </article>
-</div>
-  
-</section>
-
-<hr color= "#434e5f" class="block"> 
-
-<!---->
-<section>
-
-<div class="mydiv"><h2> Research</h2></div>
- 
- 
-<article class="research">
-      <p>Work in progress. Drafts coming soon!</p>
-      <p> “The sectoral effects of oil supply shocks: evidence for the UK” (2024)</p> 
-      <p> "Sectoral Government spending  multipliers in a production network: an empirical investigation for the UK”</p>
-      <p> “The international transmission of US government spending shocks”(2021) </p>
-      <p> “The spatial dimension of the macroeconomic effects of labour reallocation. An empirical application for the U.S.” (2019) with T.Panagiotidis </p> 
-
-         
-        
-</article>
-
-</section>
-
-<hr color= "#434e5f" class="block"> 
-<!--
-<section>
-
-  <div class="mydiv"><h3> Code </h3></div>
-   <article class="code">
-      <p></p> 
-
-         
-        
+      <div class="column">
+        <p><b>Education</b></p>
+        <ul class="fa-ul">
+          <li>PhD in Economics</li>
+          <dt><small>University of Sheffield, UK</small></dt>
+          <dt><hr color="white"></dt>
+          <li>MSc in Economics</li>
+          <dt><small>University of Macedonia, Greece</small></dt>
+          <dt><hr color="white"></dt>          <li>BSc in Economics</li>
+          <dt><small>University of Macedonia, Greece</small></dt>
+        </ul>
+      </div>
+    </div>
   </article>
 
+
+<hr color="#434e5f">
+
+<section>
+  <div class="section_title"><h2>Research</h2></div>
+  <article class="research">
+    <p>Work in progress. Drafts coming soon!</p>
+    <p>“The sectoral effects of oil supply shocks: evidence for the UK” (2024)</p>
+    <p>"Sectoral Government spending multipliers in a production network: an empirical investigation for the UK”</p>
+    <p>“The international transmission of US government spending shocks”(2021)</p>
+    <p>“The spatial dimension of the macroeconomic effects of labour reallocation. An empirical application for the U.S.” (2019) with T.Panagiotidis</p>
+  </article>
 </section>
--->
-  <footer>
-      &lt;&lt;&lt; &copy; <a href="about.html"> Michael Litainas </a> &gt;&gt;&gt;
-  </footer>
+
+<hr color="#434e5f">
+
+<footer>
+  &lt;&lt;&lt; &copy; <a href="about.html">Michael Litainas</a> &gt;&gt;&gt;
+</footer>
 </body>
 </html>
