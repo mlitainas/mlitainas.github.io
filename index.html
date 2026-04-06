@@ -1,228 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>mlitainas</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Font Awesome for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<style>
-* {
-  box-sizing: border-box;
-}
+  <title>mlitainas</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #434e5f;
-  font-size: 16pt;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #434e5f;
+      font-size: 16pt;
+    }
 
-img {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  border: 12px;
-  margin: 30px;
-}
+    img {
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      border: 12px;
+      margin: 30px;
+    }
 
-.mydiv {
-  height: 300px;
-  color: white;
-  margin: 10px 0;
-  clear: both;
-}
+    .mydiv {
+      height: 300px;
+      color: white;
+      margin: 10px 0;
+      clear: both;
+    }
 
-/* Style the header */
-header {
-  background-color: #666;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
+    /* Style the header */
+    header {
+      background-color: #666;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+      color: white;
+    }
 
-/* Style for the navigation pane */
-.topnav {
-  background-color: white;
-  overflow: hidden;
-}
+    /* Style for the navigation pane */
+    .topnav {
+      background-color: white;
+      overflow: hidden;
+    }
 
-/* Style for navigation links */
-.topnav a {
-  float: right;
-  display: block;
-  color: black;
-  text-align: right;
-  padding: 20px 30px;
-  text-decoration: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 30px;
-}
+    /* Style for navigation links */
+    .topnav a {
+      float: right;
+      display: block;
+      color: black;
+      text-align: right;
+      padding: 20px 30px;
+      text-decoration: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 30px;
+    }
 
-/* Change color of links on hover */
-.topnav a:hover {
-  background-color: rgb(174, 176, 176);
-  color: #333;
-}
+    /* Change color of links on hover */
+    .topnav a:hover {
+      background-color: rgb(174, 176, 176);
+      color: #333;
+    }
 
-.topnav a.split {
-  float: left;
-  background-color: white;
-  color: black;
-}
+    .topnav a.split {
+      float: left;
+      background-color: white;
+      color: black;
+    }
 
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+    /* Clear floats */
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
 
-.shortbio,
-.research,
-.workexp,
-.code {
-  padding: 20px;
-  background-color: #ffffff;
-  margin-bottom: 20px;
-}
+    .shortbio,
+    .research,
+    .workexp,
+    .code {
+      padding: 20px;
+      background-color: #ffffff;
+      margin-bottom: 20px;
+    }
 
-/* Columns for content */
-.column {
-  float: left;
-  width: 100%;
-  padding: 10px;
-}
+    /* Columns for content */
+    .column {
+      float: left;
+      width: 100%;
+      padding: 10px;
+    }
 
-@media (min-width: 768px) {
-  .column {
-    width: 50%;
-  }
-}
+    @media (min-width: 768px) {
+      .column {
+        width: 50%;
+      }
+    }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-}
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
-.container .column {
-  flex: 1;
-  min-width: 50%;
-}
+    .container .column {
+      flex: 1;
+      min-width: 50%;
+    }
 
-@media (max-width: 767px) {
-  .container .column {
-    min-width: 100%;
-  }
-}
+    @media (max-width: 767px) {
+      .container .column {
+        min-width: 100%;
+      }
+    }
 
-/* Style the footer */
-footer {
-  background-color: #acbed46e;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
+    /* Style the footer */
+    footer {
+      background-color: #acbed46e;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
 
-/* Responsive layout for navigation */
-@media (max-width: 600px) {
-  .topnav a {
-    float: none;
-    display: block;
-    text-align: center;
-  }
-  img {
-    display: block;
-    margin: 20px auto;
-    float: none;
-  }
-  .shortbio,
-  .research,
-  .workexp,
-  .code {
-    width: 100%;
-    float: none;
-  }
-}
+    /* Responsive layout for navigation */
+    @media (max-width: 600px) {
+      .topnav a {
+        float: none;
+        display: block;
+        text-align: center;
+      }
 
-.section_title{
-  height: 30px;
-  color: white;
-  margin: 10px 0;
-  clear: both;
-}
+      img {
+        display: block;
+        margin: 20px auto;
+        float: none;
+      }
 
+      .shortbio,
+      .research,
+      .workexp,
+      .code {
+        width: 100%;
+        float: none;
+      }
+    }
 
-.avatar_img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.social-icons {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.social-icons a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  font-size: 50px;
-}
-
-.social-icons a:hover {
-  color: #ccc;
-}
-
-.custom-link {
-    color: black;          /* Makes the link text black */
-    font-family: Arial, sans-serif; /* Changes the font to Arial */
-    text-decoration: none; /* Removes the underline */
-}
-
-.custom-link:hover {
-    text-decoration: underline; /* Optional: adds underline on hover */
-    color: rgb(142, 9, 51)
-}
+    .section_title {
+      height: 30px;
+      color: white;
+      margin: 10px 0;
+      clear: both;
+    }
 
 
-</style>
+    .avatar_img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .social-icons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 50px;
+    }
+
+    .social-icons a:hover {
+      color: #ccc;
+    }
+
+    .custom-link {
+      color: black;
+      /* Makes the link text black */
+      font-family: Arial, sans-serif;
+      /* Changes the font to Arial */
+      text-decoration: none;
+      /* Removes the underline */
+    }
+
+    .custom-link:hover {
+      text-decoration: underline;
+      /* Optional: adds underline on hover */
+      color: rgb(142, 9, 51)
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="topnav">
-  <a href="#home" id="home">Home</a>
-  <a href="#research" target="research_block">Research</a>
-  <a href="#news"></a>
-  <a href="#about" class="split">Michael Litainas</a>
-</div>
+  <div class="topnav">
+    <a href="#home" id="home">Home</a>
+    <a href="#research" target="research_block">Research</a>
+    <a href="#news"></a>
+    <a href="#about" class="split">Michael Litainas</a>
+  </div>
 
 
-<section class="clearfix">
+  <section class="clearfix">
     <img src="avatar.jpg" alt="Personal image" class="avatar_img">
-</section>
+  </section>
 
-<section class="clearfix">
-  <div class="social-icons">
-  <a href= "https://github.com/mlitainas" target="_blank"><i class="fab fa-github"></i></a>
-  <a href= "https://www.linkedin.com/in/michael-litainas/" target="_blank"><i class="fab fa-linkedin"></i></a>
-  <a href= "https://x.com/MLitainas" target="_blank"><i class="fab fa-twitter"></i></a>
-  <a href="https://scholar.google.com/citations?user=JHf9Y4kAAAAJ&hl=en&authuser=1&oi=ao" target="_blank">
-    <i class="fas fa-graduation-cap"></i> 
-</a>
-<a href= "https://drive.google.com/file/d/14q9qS54VKokPW_2GTxwlAqfbVQ5Hvsy-/view?usp=drive_link" target="_blank"><i class="fa-regular fa-file"></i></a>
+  <section class="clearfix">
+    <div class="social-icons">
+      <a href="https://github.com/mlitainas" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/michael-litainas/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://x.com/MLitainas" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://scholar.google.com/citations?user=JHf9Y4kAAAAJ&hl=en&authuser=1&oi=ao" target="_blank">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+      <a href="https://drive.google.com/file/d/1mEmZ_t8T-FKlzAoaVL9pstw48-0LqwU9/view?usp=sharing" target="_blank"><i
+          class="fa-regular fa-file"></i></a>
 
-</div>
-</section>
+    </div>
+  </section>
 
 
- <article class="shortbio">
+  <article class="shortbio">
     <h1>Welcome to my website!</h1>
-    <p> I am an applied Macroeconomist, with a strong interest in data analysis and empirical research methods. My work has covered a range of topics in the areas of international economics, fiscal and monetary policy and oil shocks. I have a solid  background in time-series and panel data econometrics, along with advanced programming skills in several programming
-      languages. </p>
+    <p> I am an applied macroeconomist with a PhD in Economics and experience across Government, Central Banking, Academia and Policy Institutions.
+        My research focuses on international economics, fiscal and monetary policy, and energy shocks, and I have a solid background in time-series
+        and panel-data econometrics, and general equilibrium models. Fluent in R, Matlab and Python.
+ </p>
     <div class="container">
       <div class="column">
         <p><b>Research Interests.</b></p>
@@ -239,10 +248,15 @@ footer {
         <ul class="fa-ul">
           <li>PhD in Economics</li>
           <dt><small>University of Sheffield, UK</small></dt>
-          <dt><hr color="white"></dt>
+          <dt>
+            <hr color="white">
+          </dt>
           <li>MSc in Economics</li>
           <dt><small>University of Macedonia, Greece</small></dt>
-          <dt><hr color="white"></dt>          <li>BSc in Economics</li>
+          <dt>
+            <hr color="white">
+          </dt>
+          <li>BSc in Economics</li>
           <dt><small>University of Macedonia, Greece</small></dt>
         </ul>
       </div>
@@ -250,42 +264,62 @@ footer {
   </article>
 
 
-<hr color="#434e5f">
+  <hr color="#434e5f">
 
-<section>
-  <div class="section_title" id="research"><h2>Research</h2></div>
-  
-  <article class="research">
-   
-    <p style="font-family: sans-serif;" > <b style = "font-size:24px"> Working papers. </b> </p>
-    
-    <!--link to paper-->
-    <p style = "font-size:18px">
-      <a href="https://drive.google.com/file/d/1rUuyOiw7j3YwUO3HTv-LDkm48o2cbP8v/view?usp=sharing" 
-      class="custom-link" target="_blank"> “The international transmission of US government spending shocks” (2024)  </a>
-      <span style ="font-size:16px" > with P.McAdam, A.Montagnoli, K.Mouratidis <span style="color:rgb(218, 2, 95);" > [under submission] </span>
-    </p>
-    <!--title-->
-    <p style="font-family: sans-serif;", sans-serif;> <b style = "font-size:24px"> Work in progress. </b>
-       <span style ="font-size:17px" style="font-family: Arial, sans-serif;">  Drafts coming soon 😅 ! </span> 
-    </p> 
-    <!--paper-->
-    <p style = "font-size:18px" > “The sectoral effects of oil supply shocks: evidence for the UK” </p>
-    <!--paper-->
-    <p style = "font-size:18px"> "Sectoral Government spending multipliers in a production network: an empirical investigation for the UK”</p>
-    <!--paper-->
-    <p style = "font-size:18px"> 
-      “The cross-border propagation of sectoral shocks. An empirical examination for the U.S.”  
-      <span style ="font-size:18px" > with T.Panagiotidis </span>
-    </p>
-  
-  </article>
-</section>
+  <section>
+    <div class="section_title" id="research">
+      <h2>Research</h2>
+    </div>
 
-<hr color="#434e5f">
+    <article class="research">
 
-<footer>
-  &lt;&lt;&lt; &copy; <a href="#home"> <span style="color:rgb(63, 30, 51);" >  Michael Litainas </span> </a> &gt;&gt;&gt;
-</footer>
+
+       <p style="font-family: sans-serif;"> <b style="font-size:24px"> Publications </b> </p>
+
+      <!--link to paper-->
+      <p style="font-size:18px">
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0261560625002438" target="_blank"
+          style="color: blue;">
+          “The international transmission of US government spending shocks” (2024).
+        </a>
+        <span style="font-size:16px"><i>Journal of International Money and Finance</i></span>
+        <span style="font-size:16px">
+          with P.McAdam, A.Montagnoli, K.Mouratidis
+        </span>
+      </p>
+
+      <!--title-->
+      <p style="font-family: sans-serif;" , sans-serif;> <b style="font-size:24px"> Working Papers. </b>  </p>
+      <!--paper-->
+         <p style="font-size:18px">
+        <a href="" target="_blank"
+          style="color: blue;">
+          “When UK Government spends, which sectors gain most? Disaggregating the fiscal multiplier” (2026).
+        </a>
+        <span style="font-size:16px"><i>Working Paper</i></span>
+        <span style="font-size:16px">
+          with V.Polito
+        </span>
+      
+      <!--title-->
+      <p style="font-family: sans-serif;" , sans-serif;> <b style="font-size:24px"> Work in progress. </b>
+        <span style="font-size:17px" style="font-family: Arial, sans-serif;"> Drafts coming soon 😅 ! </span>
+      </p>
+      <!--paper-->
+      <p style="font-size:18px">
+        “The cross-border propagation of sectoral shocks. An empirical examination for the U.S.”
+        <span style="font-size:18px"> with T.Panagiotidis </span>
+      </p>
+
+    </article>
+  </section>
+
+  <hr color="#434e5f">
+
+  <footer>
+    &lt;&lt;&lt; &copy; <a href="#home"> <span style="color:rgb(63, 30, 51);"> Michael Litainas </span> </a>
+    &gt;&gt;&gt;
+  </footer>
 </body>
+
 </html>
