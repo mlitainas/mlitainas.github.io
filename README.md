@@ -1,4 +1,4 @@
 # mlitainas.github.io
 
 
-Source code of my personal website. 
+Source code for my personal website. 
