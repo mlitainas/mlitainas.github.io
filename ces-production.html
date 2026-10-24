@@ -1799,7 +1799,84 @@ html&gt;body{padding:0}&lt;/style&gt;
   syncTheme();
 })();
 &lt;/script&gt;
-&lt;div id=&quot;man-three-sector-ces-output&quot;&gt;
+&lt;div id=&quot;ces-lesson-page&quot;&gt;
+  &lt;style&gt;
+    #ces-lesson-page { max-width: 880px; margin: 0 auto; color: var(--foreground); }
+    #ces-lesson-page .lesson-title { margin: 0 0 18px; }
+    #ces-lesson-page .lesson-intro { margin: 0 0 26px; }
+    #ces-lesson-page .lesson-intro span { display: block; margin-bottom: 5px; }
+    #ces-lesson-page .lesson-notation { margin: 0 0 24px; }
+    #ces-lesson-page .lesson-section { margin: 24px 0; }
+    #ces-lesson-page .lesson-section h2 { margin: 0 0 8px; }
+    #ces-lesson-page .lesson-section p { margin: 8px 0; }
+    #ces-lesson-page .lesson-equation { max-width: 100%; overflow-x: auto; padding: 10px 0; }
+    #ces-lesson-page .lesson-equation .katex { display: block; width: max-content; min-width: 100%; }
+    #ces-lesson-page math { color: var(--foreground); font-size: 1.1em; }
+    #ces-lesson-page .lesson-limits { margin: 24px 0; }
+    #ces-lesson-page .lesson-limits summary { font-weight: 500; }
+    #ces-lesson-page .lesson-limits h3 { margin: 18px 0 8px; }
+    #ces-lesson-page .lesson-divider { margin: 30px 0; }
+  &lt;/style&gt;
+  &lt;header&gt;
+    &lt;h1 class=&quot;lesson-title&quot;&gt;CES Production Explorer&lt;/h1&gt;
+    &lt;p class=&quot;lesson-intro&quot;&gt;
+      &lt;span&gt;A constant elasticity of substitution (CES) function combines inputs into output.&lt;/span&gt;
+      &lt;span&gt;Its elasticity σ determines how easily one input can replace another as relative prices change.&lt;/span&gt;
+      &lt;span&gt;Here, manufacturing (MAN) uses agricultural (AGR), manufactured (MAN) and service (SER) inputs.&lt;/span&gt;
+    &lt;/p&gt;
+  &lt;/header&gt;
+
+  &lt;p class=&quot;lesson-notation&quot;&gt;
+    Let &lt;em&gt;i&lt;/em&gt; index AGR, MAN and SER. Q&lt;sub&gt;MAN&lt;/sub&gt; is manufacturing output;
+    Q&lt;sub&gt;i&lt;/sub&gt;&lt;sup&gt;in&lt;/sup&gt; and P&lt;sub&gt;i&lt;/sub&gt;&lt;sup&gt;in&lt;/sup&gt; are the quantity and price of input &lt;em&gt;i&lt;/em&gt;.
+    Benchmark cost shares are α&lt;sub&gt;AGR&lt;/sub&gt; = 0.2, α&lt;sub&gt;MAN&lt;/sub&gt; = 0.5 and α&lt;sub&gt;SER&lt;/sub&gt; = 0.3,
+    with all benchmark prices normalised to one.
+  &lt;/p&gt;
+
+  &lt;section class=&quot;lesson-section&quot; aria-labelledby=&quot;lesson-production-heading&quot;&gt;
+    &lt;h2 id=&quot;lesson-production-heading&quot;&gt;CES production in levels&lt;/h2&gt;
+    &lt;p&gt;For σ &amp;gt; 0 and σ ≠ 1, define ρ = (σ − 1)/σ. Output is:&lt;/p&gt;
+    &lt;div class=&quot;lesson-equation&quot; data-equation=&quot;production&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;M&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msup&gt;&lt;mrow&gt;&lt;mo fence=&quot;true&quot;&gt;[&lt;/mo&gt;&lt;munder&gt;&lt;mo&gt;∑&lt;/mo&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/munder&gt;&lt;msubsup&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;/&lt;/mi&gt;&lt;mi&gt;σ&lt;/mi&gt;&lt;/mrow&gt;&lt;/msubsup&gt;&lt;msup&gt;&lt;mrow&gt;&lt;mo fence=&quot;true&quot;&gt;(&lt;/mo&gt;&lt;msubsup&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;i&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msubsup&gt;&lt;mo fence=&quot;true&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mi&gt;ρ&lt;/mi&gt;&lt;/msup&gt;&lt;mo fence=&quot;true&quot;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;/&lt;/mi&gt;&lt;mi&gt;ρ&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;Q_{\mathrm{MAN}}=\left[\sum_i\alpha_i^{1/\sigma}\left(Q_i^{\mathrm{in}}\right)^{\rho}\right]^{1/\rho}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;p class=&quot;text-small text-muted&quot;&gt;
+      The weights α&lt;sub&gt;i&lt;/sub&gt;&lt;sup&gt;1/σ&lt;/sup&gt; keep the benchmark cost shares consistent with the price and demand equations below.
+      At benchmark prices, producing 100 units requires 20, 50 and 30 units of the three inputs.
+    &lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;section class=&quot;lesson-section&quot; aria-labelledby=&quot;lesson-price-heading&quot;&gt;
+    &lt;h2 id=&quot;lesson-price-heading&quot;&gt;Unit cost and price&lt;/h2&gt;
+    &lt;p&gt;Cost minimisation gives the cost of producing one unit of manufacturing output:&lt;/p&gt;
+    &lt;div class=&quot;lesson-equation&quot; data-equation=&quot;price&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;M&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msup&gt;&lt;mrow&gt;&lt;mo fence=&quot;true&quot;&gt;[&lt;/mo&gt;&lt;munder&gt;&lt;mo&gt;∑&lt;/mo&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/munder&gt;&lt;msub&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;msup&gt;&lt;mrow&gt;&lt;mo fence=&quot;true&quot;&gt;(&lt;/mo&gt;&lt;msubsup&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;i&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msubsup&gt;&lt;mo fence=&quot;true&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi&gt;σ&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mo fence=&quot;true&quot;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;/&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi&gt;σ&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;P_{\mathrm{MAN}}=\left[\sum_i\alpha_i\left(P_i^{\mathrm{in}}\right)^{1-\sigma}\right]^{1/(1-\sigma)}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;p class=&quot;text-small text-muted&quot;&gt;
+      P&lt;sub&gt;MAN&lt;/sub&gt; is the unit cost shown at the top of the production tree.
+      P&lt;sub&gt;MAN&lt;/sub&gt;&lt;sup&gt;in&lt;/sup&gt; is the purchase price of manufactured inputs on the lower branch.
+    &lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;section class=&quot;lesson-section&quot; aria-labelledby=&quot;lesson-demand-heading&quot;&gt;
+    &lt;h2 id=&quot;lesson-demand-heading&quot;&gt;Input demand functions&lt;/h2&gt;
+    &lt;p&gt;For a given level of manufacturing output, the cost-minimising input quantities are:&lt;/p&gt;
+    &lt;div class=&quot;lesson-equation&quot; data-equation=&quot;demand-agr&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msubsup&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;G&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;R&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;i&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msubsup&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;0.2&lt;/mn&gt;&lt;mtext&gt; &lt;/mtext&gt;&lt;msub&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;M&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;msup&gt;&lt;mrow&gt;&lt;mo fence=&quot;true&quot;&gt;(&lt;/mo&gt;&lt;mfrac&gt;&lt;msubsup&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;G&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;R&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;i&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msubsup&gt;&lt;msub&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;M&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mfrac&gt;&lt;mo fence=&quot;true&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi&gt;σ&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;Q_{\mathrm{AGR}}^{\mathrm{in}}=0.2\,Q_{\mathrm{MAN}}\left(\frac{P_{\mathrm{AGR}}^{\mathrm{in}}}{P_{\mathrm{MAN}}}\right)^{-\sigma}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;lesson-equation&quot; data-equation=&quot;demand-man&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msubsup&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;M&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;i&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msubsup&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;0.5&lt;/mn&gt;&lt;mtext&gt; &lt;/mtext&gt;&lt;msub&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;M&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;msup&gt;&lt;mrow&gt;&lt;mo fence=&quot;true&quot;&gt;(&lt;/mo&gt;&lt;mfrac&gt;&lt;msubsup&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;M&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;i&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msubsup&gt;&lt;msub&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;M&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mfrac&gt;&lt;mo fence=&quot;true&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi&gt;σ&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;Q_{\mathrm{MAN}}^{\mathrm{in}}=0.5\,Q_{\mathrm{MAN}}\left(\frac{P_{\mathrm{MAN}}^{\mathrm{in}}}{P_{\mathrm{MAN}}}\right)^{-\sigma}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;lesson-equation&quot; data-equation=&quot;demand-ser&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msubsup&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;S&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;E&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;R&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;i&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msubsup&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;0.3&lt;/mn&gt;&lt;mtext&gt; &lt;/mtext&gt;&lt;msub&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;M&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;msup&gt;&lt;mrow&gt;&lt;mo fence=&quot;true&quot;&gt;(&lt;/mo&gt;&lt;mfrac&gt;&lt;msubsup&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;S&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;E&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;R&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;i&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msubsup&gt;&lt;msub&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;M&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;/mfrac&gt;&lt;mo fence=&quot;true&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi&gt;σ&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;Q_{\mathrm{SER}}^{\mathrm{in}}=0.3\,Q_{\mathrm{MAN}}\left(\frac{P_{\mathrm{SER}}^{\mathrm{in}}}{P_{\mathrm{MAN}}}\right)^{-\sigma}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;p class=&quot;text-small text-muted&quot;&gt;
+      Raising output scales all three demands proportionally; changing relative prices changes the input mix when σ &amp;gt; 0.
+    &lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;details class=&quot;lesson-limits&quot;&gt;
+    &lt;summary&gt;Special cases: σ = 1 and σ = 0&lt;/summary&gt;
+    &lt;h3&gt;σ = 1: Cobb–Douglas&lt;/h3&gt;
+    &lt;div class=&quot;lesson-equation&quot; data-equation=&quot;cobb-production&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;M&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;munder&gt;&lt;mo&gt;∏&lt;/mo&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/munder&gt;&lt;msup&gt;&lt;mrow&gt;&lt;mo fence=&quot;true&quot;&gt;(&lt;/mo&gt;&lt;mfrac&gt;&lt;msubsup&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;i&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msubsup&gt;&lt;msub&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;/mfrac&gt;&lt;mo fence=&quot;true&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;msub&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;Q_{\mathrm{MAN}}=\prod_i\left(\frac{Q_i^{\mathrm{in}}}{\alpha_i}\right)^{\alpha_i}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;lesson-equation&quot; data-equation=&quot;cobb-price&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;M&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;munder&gt;&lt;mo&gt;∏&lt;/mo&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/munder&gt;&lt;msup&gt;&lt;mrow&gt;&lt;mo fence=&quot;true&quot;&gt;(&lt;/mo&gt;&lt;msubsup&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;i&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msubsup&gt;&lt;mo fence=&quot;true&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;msub&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;P_{\mathrm{MAN}}=\prod_i\left(P_i^{\mathrm{in}}\right)^{\alpha_i}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;h3&gt;σ = 0: fixed input proportions&lt;/h3&gt;
+    &lt;div class=&quot;lesson-equation&quot; data-equation=&quot;leontief-production&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;M&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;munder&gt;&lt;mrow&gt;&lt;mi&gt;min&lt;/mi&gt;&lt;mo&gt;⁡&lt;/mo&gt;&lt;/mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/munder&gt;&lt;mrow&gt;&lt;mo fence=&quot;true&quot;&gt;{&lt;/mo&gt;&lt;mfrac&gt;&lt;msubsup&gt;&lt;mi&gt;Q&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;i&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msubsup&gt;&lt;msub&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;/mfrac&gt;&lt;mo fence=&quot;true&quot;&gt;}&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;Q_{\mathrm{MAN}}=\min_i\left\{\frac{Q_i^{\mathrm{in}}}{\alpha_i}\right\}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;lesson-equation&quot; data-equation=&quot;leontief-price&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;M&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;A&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;munder&gt;&lt;mo&gt;∑&lt;/mo&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/munder&gt;&lt;msub&gt;&lt;mi&gt;α&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;msubsup&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mrow&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;i&lt;/mi&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;/msubsup&gt;&lt;/mrow&gt;&lt;annotation encoding=&quot;application/x-tex&quot;&gt;P_{\mathrm{MAN}}=\sum_i\alpha_i P_i^{\mathrm{in}}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;p&gt;The same input demand equations apply at these limits.&lt;/p&gt;
+  &lt;/details&gt;
+
+  &lt;hr class=&quot;lesson-divider&quot;&gt;
+  &lt;div id=&quot;man-three-sector-ces-output&quot;&gt;
   &lt;style&gt;
     #man-three-sector-ces-output { color: var(--foreground); }
     #man-three-sector-ces-output .m3-heading { margin: 0 100px 6px 0; }
@@ -1819,8 +1896,8 @@ html&gt;body{padding:0}&lt;/style&gt;
     #man-three-sector-ces-output .m3-chart .m3-bar { fill: var(--viz-series-1); }
     #man-three-sector-ces-output .m3-note { margin-top: 2px; }
   &lt;/style&gt;
-  &lt;h3 class=&quot;m3-heading&quot;&gt;MAN demand for sector inputs&lt;/h3&gt;
-  &lt;div class=&quot;m3-meta text-small text-muted&quot;&gt;Benchmark input shares: AGR 20%, MAN 50%, SER 30%&lt;/div&gt;
+  &lt;h2 class=&quot;m3-heading&quot;&gt;Explore manufacturing input demand&lt;/h2&gt;
+  &lt;div class=&quot;m3-meta text-small text-muted&quot;&gt;Benchmark cost shares: AGR 20%, MAN 50%, SER 30%&lt;/div&gt;
   &lt;div class=&quot;viz-controls&quot;&gt;
     &lt;label class=&quot;form-label&quot; for=&quot;m3-price-agr&quot;&gt;
       &lt;span&gt;AGR input price&lt;/span&gt;&lt;output id=&quot;m3-agr-price-display&quot; class=&quot;tabular-nums&quot; for=&quot;m3-price-agr&quot;&gt;1.00&lt;/output&gt;
@@ -2070,6 +2147,8 @@ html&gt;body{padding:0}&lt;/style&gt;
   })();
   &lt;/script&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+
 
 &lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
